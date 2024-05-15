@@ -17,8 +17,8 @@ Giao diện trực quan của **ComputerShop** đảm bảo ngay cả những ng
 
 
 ## 📫 Kết nối với ComputerShop
-- 💌 Email: [contact@mobileshop.com](mailto:contact@mobileshop.com)
-- 📞 Điện thoại: [+84 938197161]
+- 💌 Email: [contact@mobileshop.com](mailto:contact@ComputerShop.com)
+- 📞 Điện thoại: [+84 123456789]
 - 🌐 Website: [MobileShop Chính Thức](https://google.com)
 
 ---
