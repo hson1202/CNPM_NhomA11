@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Shopping.Models;
 
 namespace Shopping.Repository
 {
-	public class DataContext : DbContext
+	public class DataContext : IdentityDbContext<AppUserModel>
 	{
 		public DataContext() 
 		{ 
@@ -24,7 +25,7 @@ namespace Shopping.Repository
 		public DataContext CreateDbContext(string[] args)
 		{
 			var optionsBuilder = new DbContextOptionsBuilder<DataContext>();
-			optionsBuilder.UseSqlServer("Data Source=-PC;Initial Catalog=Shopping;Integrated Security=True;Trust Server Certificate=True");
+			optionsBuilder.UseSqlServer("Data Source=DESKTOP-929RN0E;Initial Catalog=Shopping;Integrated Security=True");
 
 			return new DataContext(optionsBuilder.Options);
 		}
