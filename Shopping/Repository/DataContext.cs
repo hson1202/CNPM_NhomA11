@@ -19,15 +19,8 @@ namespace Shopping.Repository
 
 		public DbSet <ProductModel> Products { get;set; }
 		public DbSet<CategoryModel> Categories { get; set; }
+		public DbSet<OrderModel> Orders { get; set; }
+		public DbSet<OrderDetails> OrderDetails { get; set; }
 	}
-	public class BloggingContextFactory : IDesignTimeDbContextFactory<DataContext>
-	{
-		public DataContext CreateDbContext(string[] args)
-		{
-			var optionsBuilder = new DbContextOptionsBuilder<DataContext>();
-			optionsBuilder.UseSqlServer("Data Source=DESKTOP-929RN0E;Initial Catalog=Shopping;Integrated Security=True");
-
-			return new DataContext(optionsBuilder.Options);
-		}
-	}
+	
 }

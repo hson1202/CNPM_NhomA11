@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Shopping.Models;
 using Shopping.Repository;
@@ -31,12 +31,16 @@ builder.Services.AddRazorPages();
 builder.Services.Configure<IdentityOptions>(options =>
 {
     // Password settings.
+    options.SignIn.RequireConfirmedAccount = false;
     options.Password.RequireDigit = true;
     options.Password.RequireLowercase = true;
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequireUppercase = false;
     options.Password.RequiredLength = 6;
     options.User.RequireUniqueEmail = true;
+    // User settings
+    options.User.AllowedUserNameCharacters =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
 });
 
 var app = builder.Build();
@@ -69,6 +73,7 @@ app.MapControllerRoute(
     name: "brand",
     pattern: "/brand/{Slug?}",
     defaults: new { controller = "Brand", action = "Index" });
+
 
 app.MapControllerRoute(
     name: "default",
