@@ -38,9 +38,7 @@ Giao diện trực quan của **ComputerShop** đảm bảo ngay cả những ng
 | **Thành viên**          | **Mã sinh viên** |
 |------------------------|------------------|
 |  **Phạm Hải Sơn**       | 21DH112887      |
-| **Nguyễn Thành Hưng**   |22DH111432   |
-|  **Nguyễn Thành Danh**       | 22DH110488   |
-|  **Nguyễn Khổng Bình Nguyên**       | 22DH114647     |
+
 
 
 
